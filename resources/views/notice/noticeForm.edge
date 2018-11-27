@@ -1,0 +1,28 @@
+@layout('principal_layout')
+@section('content')
+    <div class="container">
+        <center><h2>Registro de Noticia</h2></center>
+        <form method="POST" action="" class="form" enctype="multipart/form-data">
+            {{ csrfField() }}
+           <div class="row">
+                <div class="col">
+                    <label for="title">Titulo de noticia</label>   
+                    <input required class="form-control" type="text" id="title" name="title" placeholder="Titulo de Noticia">
+                </div>
+                <div class="col">
+                    <label for="image">Imagen de Noticia</label>   
+                    <input class="form-control" required type="file" name="profile_pic" id="image"/>
+                </div>
+            </div><br>
+            <div class="row">
+                <label for="content">Contenido de Noticia</label>
+                <textarea class="form-control" required name="content" id="content" cols="100" rows="10"></textarea>
+            </div><br>
+            <div class="col">
+                <input type="text" name="autor" placeholder="Nombre de autor" class="form-control col-md-5" required>
+            </div>
+                <br>
+            <center><button type="submit" class="btn btn-primary">Subir Noticia</button></center>
+        </form>
+    </div>
+@endsection

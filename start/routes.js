@@ -17,3 +17,5 @@
 const Route = use('Route')
 
 Route.on('/').render('index')
+//---------------notice routes-----------------
+Route.get('/addNotice','NoticeController.getForm')
