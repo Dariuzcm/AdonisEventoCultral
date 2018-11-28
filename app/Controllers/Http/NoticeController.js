@@ -5,14 +5,14 @@ const Helpers= use('Helpers')
 
 
 class NoticeController {
-    async addNotice(request,session,response){
-        const notice_ref= Database.select('id').from('notices').orderBy('id', 'desc')
+    async addNotice({request,session,response}){
+
         const profilePic = request.file('profile_pic', {
-            types: ['image']
+            types: ['image'],
           })
           
-          const name_img=(notice_ref+1)+`${new Date().getTime()}.${file.subtype}`
-          await profilePic.move(Helpers.tmpPath('notices'), {
+          const name_img=`${new Date().getTime()}.${profilePic.subtype}`
+          await profilePic.move(Helpers.publicPath('notices'), {
             name: name_img,
             overwrite: true
           })
@@ -41,8 +41,10 @@ class NoticeController {
                 }
             })
         }
+        return response.redirect('/journal')
 
     }
+
     async getForm({view,session}){
         try {
             //auth.checkout()
@@ -57,6 +59,14 @@ class NoticeController {
             return view.render('auth.login')    
         }
          
+    }
+
+    async getJournal({view}){
+        const notice = await Notices.all()
+        
+        return view.render('notice.journal',{
+            notices: notice.toJSON()
+        })
     }
 
 }

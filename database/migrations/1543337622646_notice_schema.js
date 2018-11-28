@@ -10,6 +10,7 @@ class NoticeSchema extends Schema {
       table.string('name')
       table.text('content','longtext')
       table.string('image')
+      table.string('autor')
       table.timestamps()
     })
   }

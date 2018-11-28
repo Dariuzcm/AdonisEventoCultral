@@ -1,0 +1,16 @@
+@layout('principal_layout')
+@section('content')
+<div class="content">
+@each(notice in notices) 
+    <div class="card" style="width: 18rem;">
+       
+    <img class="card-img-top" src="{{assetsUrl(notice.image)}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{notice.name}}</h5>
+        <p class="card-text">{{notice.created_at}}</p>
+        <a href="/notice/details/{{notice.id}}" class="btn btn-primary">Ver Noticia completa</a>
+        </div>
+    </div>
+@endeach
+</div>
+@endsection
