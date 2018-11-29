@@ -1,6 +1,14 @@
 @layout('principal_layout')
 @section('content')
+
     <div class="container">
+        
+@if(old('notification'))
+<div class="alert alert-{{old('notification.type')}}">
+        {{{old('notification.message')}}}
+    </div>   
+<div class="content-fluid">
+    @endif
         <center><h2>Registro de Noticia</h2></center>
         <form method="POST" action="" class="form" enctype="multipart/form-data">
             {{ csrfField() }}

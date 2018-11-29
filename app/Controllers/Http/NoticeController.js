@@ -1,29 +1,29 @@
 'use strict'
-const Notices= use('App/Models/Notice')
+const Notices = use('App/Models/Notice')
 const Database = use('Database')
-const Helpers= use('Helpers')
+const Helpers = use('Helpers')
 
 
 class NoticeController {
-    async addNotice({request,session,response}){
+    async addNotice({ request, session, response }) {
 
         const profilePic = request.file('profile_pic', {
             types: ['image'],
-          })
-          
-          const name_img=`${new Date().getTime()}.${profilePic.subtype}`
-          await profilePic.move(Helpers.publicPath('notices'), {
+        })
+
+        const name_img = `${new Date().getTime()}.${profilePic.subtype}`
+        await profilePic.move(Helpers.publicPath('notices'), {
             name: name_img,
             overwrite: true
-          })
-        
-          if (!profilePic.moved()) {
+        })
+
+        if (!profilePic.moved()) {
             return profilePic.error()
-          }
-        const notice= Notices.create({
+        }
+        const notice = await Notices.create({
             name: request.input('name'),
             content: request.input('content'),
-            image: 'notices/'+name_img
+            image: 'notices/' + name_img
         })
         try {
             notice.save()
@@ -37,15 +37,16 @@ class NoticeController {
             session.flash({
                 notification: {
                     type: 'danger',
-                    message: '<striog>Error!:</strong>Noticia no registrada en la base de datos .'
+                    message: '<striog>Error!:</strong>Noticia no registrada en la base de datos .' + error
                 }
             })
+
+            return response.redirect('/addNotice')
         }
         return response.redirect('/journal')
-
     }
 
-    async getForm({view,session}){
+    async getForm({ view, session }) {
         try {
             //auth.checkout()
             return view.render('notice.noticeForm')
@@ -56,15 +57,18 @@ class NoticeController {
                     message: "<strong>Advertencia</strong>: No has iniciado sesion.",
                 }
             })
-            return view.render('auth.login')    
+            return view.render('auth.login')
         }
-         
+
     }
 
-    async getJournal({view}){
-        const notice = await Notices.all()
-        
-        return view.render('notice.journal',{
+    async getJournal({ view }) {
+        const notice = await Notices.query()
+        .table('notices')
+        .orderBy('id', 'desc')
+        .fetch()
+
+        return view.render('notice.journal', {
             notices: notice.toJSON()
         })
     }

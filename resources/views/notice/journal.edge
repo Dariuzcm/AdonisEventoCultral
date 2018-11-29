@@ -1,9 +1,13 @@
 @layout('principal_layout')
 @section('content')
-<div class="content">
+@if(old('notification'))
+<div class="alert alert-{{old('notification.type')}}">
+        {{{old('notification.message')}}}
+    </div>   
+<div class="content-fluid">
+    @endif
 @each(notice in notices) 
-    <div class="card" style="width: 18rem;">
-       
+    <div class="card" style="width: 18rem;">  
     <img class="card-img-top" src="{{assetsUrl(notice.image)}}" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">{{notice.name}}</h5>
