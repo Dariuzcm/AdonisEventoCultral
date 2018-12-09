@@ -20,4 +20,6 @@ Route.on('/').render('index')
 //---------------notice routes-----------------
 Route.get('/addNotice','NoticeController.getForm')
 Route.get('/journal','NoticeController.getJournal')
-Route.post('/addNotice','NoticeController.addNotice')
+Route.post('/addNotice','NoticeController.addNotice
+Route.get('/places','PlaceController.showLugares')
+Route.get('/places/hotel/:id', 'PlaceController.showHotel')

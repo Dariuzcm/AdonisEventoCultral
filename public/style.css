@@ -1,82 +1,40 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
 
-html, body {
-  height: 100%;
-  width: 100%;
+.grey-background{
+  background-color:#f1f4f5;
 }
 
-body {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 300;
-  background-image: url("/splash.png");
-  background-color: #220052;
+.title-card{
+  background-color:#04aef7;
+  border-top-left-radius:5px;
+  border-top-right-radius:5px;
+  padding:1px;
+  font-size:130%;
+  color:#ffffff;
+  text-align:center;
+  width:100%;
+
+}
+.body-card{
+  background-color:#ffffff;
+  border-bottom-left-radius:5px;
+  border-bottom-right-radius:5px;
+  font-size:100%;
+  text-align:justified;
+  width:100%;
 }
 
-* {
-  margin: 0;
-  padding: 0;
+.list{
+  list-style:none;
+}
+.title-list{
+  color: #000000;
+  font-size: 100%;
+  font-weight:bold;
+  width:100%;
 }
 
-section {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 536px;
-  margin: auto;
-  position: relative;
-}
-
-section:before {
-  content: "";
-  position: absolute;
-  background: url("/pyramid.png") no-repeat;
-  background-size: 100%;
-  width: 100%;
-  height: 402px;
-  z-index: -1;
-}
-
-.logo {
-  background: url("/logo.svg") no-repeat;
-  width: 36px;
-  height: 33px;
-  background-size: 100%;
-  margin-bottom: 35px;
-  opacity: 0;
-  animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 1.3s forwards;
-}
-
-.title {
-  background: url("/title.svg") no-repeat;
-  width: 219px;
-  height: 36px;
-  background-size: 100%;
-  opacity: 0;
-  animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 0.2s forwards;
-}
-
-.subtitle {
-  margin-top: 25px;
-  color: #BDB3CB;
-  font-size: 17px;
-  text-align: center;
-  letter-spacing: 0.5;
-  opacity: 0;
-  animation: slideUp 1s cubic-bezier(0.19, 1, 0.30, 1) 0.5s forwards;
-}
-
-@keyframes slideUp {
-  0% {
-    transform: translateY(40px);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.2%;
-  }
-  100% {
-    opacity: 1;
-    transform: none;
-  }
+.text-list{
+  color: #8c8c8c;
+  font-size: 80%;
+  width:100%;
 }
