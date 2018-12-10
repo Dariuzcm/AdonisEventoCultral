@@ -1,0 +1,58 @@
+@layout('principal_layout')
+@section('content')
+
+    <div class="container">
+        
+@if(old('notification'))
+<div class="alert alert-{{old('notification.type')}}">
+        {{{old('notification.message')}}}
+    </div>   
+<div class="content-fluid">
+    @endif
+    @if(notice)
+    @each(notice in notice)
+      
+        <center><h2>Editar de Noticia</h2></center>
+<form method="POST" action="/notice/editar/{{notice.id}}?_method=PUT" class="form" enctype="multipart/form-data">
+            {{ csrfField() }}
+           <div class="row">
+                <div class="col">
+                    <label for="title">Titulo de noticia</label>   
+                    <input required class="form-control" type="text" id="title" name="name" value="{{notice.name}}" placeholder="Titulo de Noticia">
+                </div>
+                <div class="col">
+                    <label for="image">Imagen de Noticia</label>
+                <img src="{{assetsUrl(notice.image)}}" height="120px">   
+                <div class="row col-8">
+                    <div class="input-group mb-6">
+                        <div class="input-group-prepend">
+                          <div class="input-group-text">
+                            <input type="checkbox" id="changeImage" name="flag_modif">
+                          </div>
+                        </div>
+                           <input type="text" value=" Modificar Imagen de Noticia" readonly> 
+                      </div>
+                </div>
+                <input id="fileSelect"type="file" name="profile_pic" value="{{notice.image}}"/>
+                </div>
+            </div><br>
+            <div class="row">
+                <label for="content">Contenido de Noticia</label>
+                <textarea class="form-control" required name="content" id="content" cols="100" rows="10" >{{notice.content}}</textarea>
+            </div><br>
+            <div class="col">
+            <input type="text" name="autor" placeholder="Nombre de autor" class="form-control col-md-5" value="{{notice.autor}}" required>
+            </div>
+                <br>
+            <center><button type="submit" class="btn btn-primary">Actualizar Noticia</button></center>
+        </form>
+        @endeach
+        @else 
+            <div class="alert alert-warning"><strong>Noticia</strong> no existe</div>
+        @endif
+    </div>
+@endsection
+@section('jquery')
+{{script(assetsUrl('js/editF.js'))}}
+  
+@endsection

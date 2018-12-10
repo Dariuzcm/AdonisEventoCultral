@@ -18,6 +18,11 @@ const Route = use('Route')
 
 Route.on('/').render('index')
 //---------------notice routes-----------------
-Route.get('/addNotice','NoticeController.getForm')
-Route.get('/journal','NoticeController.getJournal')
-Route.post('/addNotice','NoticeController.addNotice')
+Route.group(()=>{
+    Route.get('/addNotice','NoticeController.getForm')
+    Route.get('/journal','NoticeController.getJournal')
+    Route.post('/addNotice','NoticeController.addNotice')
+    Route.get('/details/:id','NoticeController.getDetails')
+    Route.get('/editar/:id','NoticeController.getEdit')
+    Route.put('/editar/:id','NoticeController.edit')
+}).prefix('notice')

@@ -1,0 +1,17 @@
+@layout('principal_Layout')
+@section('content')
+    @each(item in notice)
+   <div class="card mb-3">
+        <img class="card-img-top" src="{{assetsUrl(item.image)}}" style="height: 180px; width:100; " alt="100%x180">
+       <div class="card-title"> 
+           <h4>{{item.name}}</h4>
+            <h6>{{item.created_at}}</h6>
+       </div>
+        <div class="card-text">
+            <p>{{item.content}}</p>
+            <p>By: {{item.autor}}</p>
+       </div>
+    </div>
+    @endeach
+
+@endsection
