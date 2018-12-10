@@ -1,0 +1,41 @@
+@layout('principal_layout')
+@section('content')
+
+<div class="grey-background">
+        <div class="row" style="padding:10px;">
+
+            <div class="col-md-6">
+                <div class="title-card">
+                    <p>Hospitales</p>
+                </div>
+                <div class="body-card">
+                    <ul class="list-group">
+                        @each(hospital in hospitals)
+                            <li class="list-group-item">
+                                <label class="title-list">{{ hospital.name }}</label>
+                                <label class="text-list">{{ hospital.description }}</label>
+                            </li>
+                        @endeach
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="title-card">
+                    <p>Hoteles</p>
+                </div>
+                <div class="body-card">
+                    <ul class="list-group">
+                        @each(hotel in hotels)
+                            <li class="list-group-item">
+                                <label class="title-list"><a href="/places/hotel/{{hotel.id}}">{{ hotel.name }} - MXN {{ hotel.price }}</a></label>
+                                <label class="text-list">{{ hotel.description }}</label>
+                            </li>
+                        @endeach
+                    </ul>
+                </div>
+            </div>
+        </div>
+</div>
+
+@endsection

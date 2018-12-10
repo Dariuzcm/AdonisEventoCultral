@@ -29,3 +29,6 @@ Route.group(()=>{
     Route.delete('/delete/:id','NoticeController.destroy')
     Route.get('/showAll','NoticeController.getList')
 }).prefix('notice')
+
+Route.get('/places','PlaceController.showLugares')
+Route.get('/places/hotel/:id', 'PlaceController.showHotel')
