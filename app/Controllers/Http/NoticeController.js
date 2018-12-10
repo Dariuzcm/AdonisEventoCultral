@@ -113,6 +113,18 @@ class NoticeController {
         }
             return response.redirect('/notice/editar/'+params.id)
     }
+    async getList({view}){
+        const notice= await Notices.query().orderBy('created_at','desc').fetch()
+        return view.render('notice.list',{
+            notice: notice.toJSON()
+        })
+    }   
+    async eList({view}){
+        const notice= await Notices.query().orderBy('created_at','desc').fetch()
+        return view.render('notice.editList',{
+            notice: notice.toJSON()
+        })
+    }   
     async getEdit({ params, view, auth, response, session }) {
         try {
             //auth.check()
@@ -123,6 +135,13 @@ class NoticeController {
             console.log(err)
             return response.redirect('/')
         }
+    }
+    async destroy({params, auth, response}){
+        //auth.check()
+        const notice = await Notices.find(params.id)
+        await notice.delete()
+        return response.redirect('back')
+
     }
 }
 

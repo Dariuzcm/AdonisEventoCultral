@@ -25,4 +25,7 @@ Route.group(()=>{
     Route.get('/details/:id','NoticeController.getDetails')
     Route.get('/editar/:id','NoticeController.getEdit')
     Route.put('/editar/:id','NoticeController.edit')
+    Route.get('/editar-lista','NoticeController.eList')
+    Route.delete('/delete/:id','NoticeController.destroy')
+    Route.get('/showAll','NoticeController.getList')
 }).prefix('notice')

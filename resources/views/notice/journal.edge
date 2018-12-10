@@ -10,31 +10,31 @@
     <div class="carousel slide" id="carousel" data-ride="carousel">
             <div class="carousel-inner">
                     <div class="carousel-item active">
-                            <div class="card" style="width: 18rem;">  
+                            <center>
                                 <div class="card-img-top">  
                                  <img  height="200px" width="300px" src="{{assetsUrl('utregional-logo.jpeg')}}" alt="Card image cap">
                                  </div>
                                 <div class="card-body">
                                 <h5 class="card-title">Noticias</h5>
-                                <p class="card-text">Mostrar</p>
-                                 </div>
-                            </div>
+                                <p class="card-text"><a class="link" href="/notice/showAll"> Mostrar todo</a></p>
+                                 </div></center>
                     </div>
+                    
 @each(notice in notices) 
-<div  class="carousel-item" style="display: center;">
-        <div class="card" style="width: 100%;">
+        <div  class="carousel-item card col">
+<center>
+
             <div class="card-img-top">  
             <img  height="200px" width="300px" src="{{assetsUrl(notice.image)}}" alt="Card image cap">
             </div>
             <div class="card-body">
             <h5 class="card-title">{{notice.name}}</h5>
-            <p class="card-text">{{notice.created_at}}por: <strong>{{notice.autor}}</strong></p>
+            <p class="card-text">{{notice.created_at}} por: <strong>{{notice.autor}}</strong></p>
             <a href="/notice/details/{{notice.id}}" class="btn btn-primary">Ver Noticia completa</a>
-            </div>
         </div>
-      </div>
-   
-@endeach
+</center>
+</div>
+      @endeach
 </div>
 <a class="carousel-control-prev btn-primary" href="#carousel" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
