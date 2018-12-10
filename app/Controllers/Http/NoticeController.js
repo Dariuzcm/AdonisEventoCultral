@@ -33,7 +33,7 @@ class NoticeController {
             image: 'notices/' + name_img
         })
         try {
-            notice.save()
+            await notice.save()
             session.flash({
                 notification: {
                     type: 'success',
