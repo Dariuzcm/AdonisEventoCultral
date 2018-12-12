@@ -2,7 +2,7 @@
 .grey-background{
   background-color:#f1f4f5;
 }
-
+/* styles for the card */
 .title-card{
   background-color:#04aef7;
   border-top-left-radius:5px;
@@ -22,10 +22,11 @@
   text-align:justified;
   width:100%;
 }
-
+/* styles for the list */
 .list{
   list-style:none;
 }
+
 .title-list{
   color: #000000;
   font-size: 100%;
@@ -38,3 +39,72 @@
   font-size: 80%;
   width:100%;
 }
+/******** styles for the modal window ************/
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  padding:10%;
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0;
+  border: 1px solid #888;
+  max-width: 450px;
+  height:auto;
+  min-height: 450px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {top:-300px; opacity:0} 
+  to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+  from {top:-300px; opacity:0}
+  to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+  color: #ffffff;
+  background-color:#ffffff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #343a40;
+  color: white;
+  text-align:left;
+}
+
+.modal-body {padding: 2px 16px;}

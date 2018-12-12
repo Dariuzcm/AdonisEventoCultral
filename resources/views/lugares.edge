@@ -1,36 +1,227 @@
 @layout('principal_layout')
 @section('content')
 
-<div class="grey-background">
+<div class="">
         <div class="row" style="padding:10px;">
 
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="title-card">
-                    <p>Hospitales</p>
+                <p style="margin-top:10px;" onclick="mostrarRestaurantes();">
+                    Restaurantes
+                    <a href="#" id="upRestaurant" style="display:none;"><img src="{{assetsUrl('up.png')}}" width="35px" height="35px"></a>
+                    <a href="#" id="downRestaurant" style="display:block;"><img src="{{assetsUrl('down.png')}}" width="35px" height="35px"></a>
+                </p>
                 </div>
-                <div class="body-card">
-                    <ul class="list-group">
-                        @each(hospital in hospitals)
+                    <div class="body-card">
+                    <div id="imgRestaurant"><img src="{{assetsUrl('restaurant.jpg')}}" width="100%" height="auto" alt="Imagen restaurant"></div>
+                    <ul class="list-group" id="listRestaurant" style="display:none;">
+                        @each(restaurant in restaurants)
                             <li class="list-group-item">
-                                <label class="title-list">{{ hospital.name }}</label>
-                                <label class="text-list">{{ hospital.description }}</label>
+                                <div class="row" id="myBtn{{restaurant.telephone}}">
+                                    <div class="col-md-4" style="text-align:center;">
+                                        <img src="{{ restaurant.image }}" alt="Imagen de hospital">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <a class="title-list">{{ restaurant.name }}</a>
+                                        <label class="text-list">{{ restaurant.description }}</label>
+                                    </div>
+                                </div>
                             </li>
+                            <!-- The Modal -->
+                            <div id="myModal{{restaurant.telephone}}" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2>{{restaurant.name}}}</h2>
+                                        <span class="close" id="close{{restaurant.telephone}}">&times;</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <iframe src="{{restaurant.map}}" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                // When the user clicks the button, open the modal 
+                                document.getElementById("myBtn"+{{restaurant.telephone}}).onclick = function() {
+                                    document.getElementById('myModal'+{{restaurant.telephone}}).style.display = "block";
+                                }
+                                
+                                // When the user clicks on <span> (x), close the modal
+                                document.getElementById("close"+{{restaurant.telephone}}).onclick = function() {
+                                    document.getElementById('myModal'+{{restaurant.telephone}}).style.display = "none";
+                                }
+
+                                function mostrarRestaurantes(){
+                                    var d = document.getElementById("downRestaurant");
+                                    var u = document.getElementById("upRestaurant");
+                                    var i = document.getElementById("imgRestaurant");
+                                    var l = document.getElementById("listRestaurant");
+                                    if (d.style.display === "none") {
+                                        d.style.display = "block";
+                                        u.style.display = "none";
+                                        i.style.display = "block";
+                                        l.style.display = "none";
+                                    } else {
+                                        d.style.display = "none";
+                                        u.style.display = "block";
+                                        i.style.display = "none";
+                                        l.style.display = "block";
+                                    }
+                                    
+                                }
+                            </script>
                         @endeach
                     </ul>
-                </div>
+                    </div>
             </div>
 
-            <div class="col-md-6">
+            <div class="col-md-4">
                 <div class="title-card">
-                    <p>Hoteles</p>
+                        <p style="margin-top:10px;" onclick="mostrarHospitales();">
+                            Hospitales
+                            <a href="#" id="upHospital" style="display:none;"><img src="{{assetsUrl('up.png')}}" width="35px" height="35px"></a>
+                            <a href="#" id="downHospital" style="display:block;"><img src="{{assetsUrl('down.png')}}" width="35px" height="35px"></a>
+                        </p>
+                </div>
+                    <div class="body-card">
+                            <div id="imgHospital"><img src="{{assetsUrl('hospital.jpg')}}" width="100%" height="auto" alt="Imagen restaurant"></div>
+                            <ul class="list-group" id="listHospital" style="display:none;">
+                        @each(hospital in hospitals)
+                            <li class="list-group-item">
+                                <div class="row" id="myBtn{{hospital.telephone}}">
+                                    <div class="col-md-4" style="text-align:center;">
+                                        <img src="{{ hospital.image }}" alt="Imagen de hospital">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <a class="title-list">{{ hospital.name }}</a>
+                                        <label class="text-list">{{ hospital.description }}</label>
+                                    </div>
+                                </div>
+                            </li>
+                            <!-- The Modal -->
+                            <div id="myModal{{hospital.telephone}}" class="modal">
+                                <!-- Modal content -->
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h2>{{hospital.name}}}</h2>
+                                        <span class="close" id="close{{hospital.telephone}}">&times;</span>
+                                    </div>
+                                    <div class="modal-body">
+                                        <iframe src="{{hospital.map}}" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <script>
+                                // When the user clicks the button, open the modal 
+                                document.getElementById("myBtn"+{{hospital.telephone}}).onclick = function() {
+                                    document.getElementById('myModal'+{{hospital.telephone}}).style.display = "block";
+                                }
+                                
+                                // When the user clicks on <span> (x), close the modal
+                                document.getElementById("close"+{{hospital.telephone}}).onclick = function() {
+                                    document.getElementById('myModal'+{{hospital.telephone}}).style.display = "none";
+                                }
+                                function mostrarHospitales(){
+                                    var d = document.getElementById("downHospital");
+                                    var u = document.getElementById("upHospital");
+                                    var i = document.getElementById("imgHospital");
+                                    var l = document.getElementById("listHospital");
+                                    if (d.style.display === "none") {
+                                        d.style.display = "block";
+                                        u.style.display = "none";
+                                        i.style.display = "block";
+                                        l.style.display = "none";
+                                    } else {
+                                        d.style.display = "none";
+                                        u.style.display = "block";
+                                        i.style.display = "none";
+                                        l.style.display = "block";
+                                    }
+                                    
+                                }
+                            </script>
+                        @endeach
+                    </ul>
+                    </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="title-card">
+                        <p style="margin-top:10px;" onclick="mostrarHoteles();">
+                                Hoteles
+                                <a href="#" id="upHotel" style="display:none;"><img src="{{assetsUrl('up.png')}}" width="35px" height="35px"></a>
+                                <a href="#" id="downHotel" style="display:block;"><img src="{{assetsUrl('down.png')}}" width="35px" height="35px"></a>
+                            </p>
                 </div>
                 <div class="body-card">
-                    <ul class="list-group">
+                        <div id="imgHotel"><img src="{{assetsUrl('hotel.jpg')}}" width="100%" height="auto" alt="Imagen restaurant"></div>
+                        <ul class="list-group" id="listHotel" style="display:none;">
                         @each(hotel in hotels)
                             <li class="list-group-item">
-                                <label class="title-list"><a href="/places/hotel/{{hotel.id}}">{{ hotel.name }} - MXN {{ hotel.price }}</a></label>
-                                <label class="text-list">{{ hotel.description }}</label>
+                                <div class="row" id="myBtn{{hotel.id}}">
+                                    <div class="col-md-4" style="text-align:center;">
+                                        <img src="{{ hotel.image }}" alt="Imagen de hotel">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <a class="title-list">{{ hotel.name }} - MXN {{ hotel.price }}</a>
+                                        <label class="text-list">{{ hotel.description }}</label>
+                                    </div>
+                                </div>
                             </li>
+<!-- The Modal -->
+<div id="myModal{{hotel.id}}" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+    <h2>{{hotel.name}}}</h2>
+    <span class="close" id="close{{hotel.id}}">&times;</span>
+    </div>
+    <div class="modal-body">
+    <iframe src="{{hotel.map}}" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+  </div>
+
+</div>
+
+<script>
+
+// When the user clicks the button, open the modal 
+document.getElementById("myBtn"+{{hotel.id}}).onclick = function() {
+    document.getElementById('myModal'+{{hotel.id}}).style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+document.getElementById("close"+{{hotel.id}}).onclick = function() {
+    document.getElementById('myModal'+{{hotel.id}}).style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//   if (event.target == document.getElementById('myModal'+{{hotel.id}})) {
+//     document.getElementById('myModal'+{{hotel.id}}).style.display = "none";
+//   }
+// }
+
+                                function mostrarHoteles(){
+                                    var d = document.getElementById("downHotel");
+                                    var u = document.getElementById("upHotel");
+                                    var i = document.getElementById("imgHotel");
+                                    var l = document.getElementById("listHotel");
+                                    if (d.style.display === "none") {
+                                        d.style.display = "block";
+                                        u.style.display = "none";
+                                        i.style.display = "block";
+                                        l.style.display = "none";
+                                    } else {
+                                        d.style.display = "none";
+                                        u.style.display = "block";
+                                        i.style.display = "none";
+                                        l.style.display = "block";
+                                    }
+                                    
+                                }
+</script>
                         @endeach
                     </ul>
                 </div>
