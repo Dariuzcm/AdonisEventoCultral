@@ -1,0 +1,23 @@
+@layout('principal_layout')
+@section('content')
+
+    <form class="form-signin" action="login" method="post" id="formulario" style="text-align: center;">
+        <h2 class="form-signin-heading" style="text-align: center">Por favor inicie sesión</h2>
+
+        <label for="usuario" class="sr-only">Usuario</label>
+            <input type="text" name="username" class="form-control" placeholder="Usuario" required autofocus>
+        <br>
+
+        <label for="contraseña" class="sr-only">Contraseña</label>
+            <input type="password" name="password" class="form-control" placeholder="Contraseña" required autofocus>
+
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" value="remember-me"> Recuérdame
+            </label>
+        </div>
+
+        <button class="btn btn-primary btn-lg btn-block" type="submit">Inicie sesión</button>
+    </form>
+
+@endsection
