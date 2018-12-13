@@ -1,44 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Encuentro UTDurango 2019</title>
-        {{style('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')}}
-    </head>
-
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-white bg-light">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="navbar-brand" href="#">
-                        <img src="{{assetsUrl('logo.svg')}}">
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link " href="/">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/notice/journal">Noticias</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/places">Hoteles</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
-                </li>
-            </ul>
-        </nav>
-
-        <div class="container">
-            @!section('content')
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Encuentro UTDurango 2019</title>
+    {{ style('style') }}
+    {{style('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css')}}
+</head>
+<body class="grey-background">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="navbar-brand" href="#"><img src="{{assetsUrl('logo.png')}}"></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Noticias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Eventos</a>
+          </li>
+          <li class="nav-item">
+            <a href="/places" class="nav-link">Lugares</a>
+          </li>
+        </ul>
         </div>
-
-        {{ script('https://code.jquery.com/jquery-3.3.1.min.js')}}
-        {{ script('https://code.jquery.com/jquery-3.3.1.slim.min.js') }}
-        {{ script('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js') }}
-        {{ script('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js') }}
-        @!section('jquery')
-    </body>
+    </nav>
+    <div class="container">
+        @!section('content')
+    </div>
+    {{ script('https://code.jquery.com/jquery-3.3.1.slim.min.js') }}
+    {{ script('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js') }}
+    {{ script('https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js') }}
+</body>
 </html>
