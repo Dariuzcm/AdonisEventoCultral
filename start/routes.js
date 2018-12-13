@@ -17,6 +17,7 @@
 const Route = use('Route')
 
 Route.on('/').render('index')
+
 //---------------notice routes-----------------
 Route.group(()=>{
     Route.get('/addNotice','NoticeController.getForm')
@@ -32,3 +33,12 @@ Route.group(()=>{
 
 Route.get('/places','PlaceController.showLugares')
 Route.get('/places/hotel/:id', 'PlaceController.showHotel')
+
+//----------------Admin Routes ----------------------
+Route.post("/registrar", "UserController.registrar");
+Route.post("/login", "UserController.login");
+Route.get("/admin", "UserController.showPage");
+
+Route.group(() => {
+    Route.get("/cp", "UserController.showAdminPage");
+}).prefix("admin").middleware(["auth:jwt"]);
