@@ -5,15 +5,18 @@
 <hr>
 <div class="row">
 <div class="col-md-6" style="text-align:justified;">
-<h1>{{ hotel.name }} - MXN {{ hotel.price }}</h1>
-<p><img src="{{ hotel.image }}" alt="Imagen del hotel"></p>
-<hr>
-<p>{{ hotel.address }}</p>
-<p>{{ hotel.telephone }}</p>
-<p><a href="http://{{ hotel.website }}">{{ hotel.website }}</a></p>
-<p>{{ hotel.services }}</p>
-<p>{{ hotel.details }}</p>
-<iframe src="{{ hotel.map }}" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    @each(hotel in hotel)
+    <h1>{{ hotel.name }} - MXN {{ hotel.price }}</h1>
+    <p><img src="{{ hotel.image }}" alt="Imagen del hotel"></p>
+    <hr>
+    <p>{{ hotel.address }}</p>
+    <p>{{ hotel.telephone }}</p>
+    <p><a href="http://{{ hotel.website }}">{{ hotel.website }}</a></p>
+    <p>{{ hotel.services }}</p>
+    <p>{{ hotel.details }}</p>
+    <iframe src="{{ hotel.mapa }}" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+    
+    @endeach
 </div>
 </div>
 
