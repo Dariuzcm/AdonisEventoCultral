@@ -11,12 +11,7 @@ class HotelsSchema extends Schema {
       table.decimal('price',7,2)
       table.string('description')
       table.string('image')
-      table.string('address')
-      table.string('telephone')
-      table.string('website')
-      table.string('details',1000)
-      table.string('services')
-      table.string('mapa',1000)
+      table.string('map',1000)
       table.timestamps()
     })
   }
