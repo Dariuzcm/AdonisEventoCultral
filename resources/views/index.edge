@@ -1,9 +1,13 @@
 @layout('principal_layout')
 @section('content')
 <section id="notices">
+    <label for="notices"><h1>Noticias</h1></label>
     @include('notice/journal')
 </section>
 <section id="places">
+    <div class="container">
+    <label for="places"><h1>Invitados</h1></label>
     @include('lugares')
+</div>
 </section>
 @endsection
