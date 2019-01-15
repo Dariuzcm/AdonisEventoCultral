@@ -1,5 +1,4 @@
-@layout('principal_layout')
-@section('content')
+
 @if(old('notification'))
 <div class="alert alert-{{old('notification.type')}}">
         {{{old('notification.message')}}}
@@ -46,4 +45,3 @@
       </a>
 </div>
 </div>
-@endsection

@@ -15,8 +15,7 @@ class UserController {
     }
 
     async registrar({ request, auth, response }) {
-        const userData = request.only(["name", "username", "email", "password"
-        ]);
+        const userData = request.only(["name", "username", "email", "password"]);
 
         try {
             const user = await User.create(userData);

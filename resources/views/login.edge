@@ -1,7 +1,8 @@
 @layout('principal_layout')
 @section('content')
 
-    <form class="form-signin" action="login" method="post" id="formulario" style="text-align: center;">
+    <form class="form-signin" action="/login" method="post" id="formulario" style="text-align: center;">
+        {{ csrfField() }}
         <h2 class="form-signin-heading" style="text-align: center">Por favor inicie sesión</h2>
 
         <label for="usuario" class="sr-only">Usuario</label>

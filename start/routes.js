@@ -16,7 +16,7 @@
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
 const Route = use('Route')
 
-Route.on('/').render('index')
+Route.get('/','IndexController.getIndex')
 
 //---------------notice routes-----------------
 Route.group(()=>{
