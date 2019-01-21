@@ -108,3 +108,9 @@
 }
 
 .modal-body {padding: 2px 16px;}
+
+div.main{
+  background-color: white;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+  margin-top: 3%;
+}
