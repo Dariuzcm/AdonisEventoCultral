@@ -8,7 +8,7 @@ class UserController {
     async showPage({ view }) {
 
         const users = await User.all()
-        return view.render('login', {
+        return view.render('admin/admin', {
             title: 'Inicia Sesión',
             users: users.toJSON()
         })
