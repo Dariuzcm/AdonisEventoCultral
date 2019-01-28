@@ -6,8 +6,8 @@
                 <div class="title-card">
                 <p style="margin-top:10px;" onclick="mostrarRestaurantes();">
                     Restaurantes
-                    <a href="#" id="upRestaurant" style="display:none;"><img src="{{assetsUrl('up.png')}}" width="35px" height="35px"></a>
-                    <a href="#" id="downRestaurant" style="display:block;"><img src="{{assetsUrl('down.png')}}" width="35px" height="35px"></a>
+                    <a id="upRestaurant" style="display:none;"><img src="{{assetsUrl('up.png')}}" width="35px" height="35px"></a>
+                    <a id="downRestaurant" style="display:block;"><img src="{{assetsUrl('down.png')}}" width="35px" height="35px"></a>
                 </p>
                 </div>
                     <div class="body-card">
@@ -39,11 +39,11 @@
                                 </div>
                             </div>
                             <script>
-                                // When the user clicks the button, open the modal 
+                                // When the user clicks the button, open the modal
                                 document.getElementById("myBtn"+{{restaurant.telephone}}).onclick = function() {
                                     document.getElementById('myModal'+{{restaurant.telephone}}).style.display = "block";
                                 }
-                                
+
                                 // When the user clicks on <span> (x), close the modal
                                 document.getElementById("close"+{{restaurant.telephone}}).onclick = function() {
                                     document.getElementById('myModal'+{{restaurant.telephone}}).style.display = "none";
@@ -65,7 +65,7 @@
                                         i.style.display = "none";
                                         l.style.display = "block";
                                     }
-                                    
+
                                 }
                             </script>
                         @endeach
@@ -77,8 +77,8 @@
                 <div class="title-card">
                         <p style="margin-top:10px;" onclick="mostrarHospitales();">
                             Hospitales
-                            <a href="#" id="upHospital" style="display:none;"><img src="{{assetsUrl('up.png')}}" width="35px" height="35px"></a>
-                            <a href="#" id="downHospital" style="display:block;"><img src="{{assetsUrl('down.png')}}" width="35px" height="35px"></a>
+                            <a id="upHospital" style="display:none;"><img src="{{assetsUrl('up.png')}}" width="35px" height="35px"></a>
+                            <a id="downHospital" style="display:block;"><img src="{{assetsUrl('down.png')}}" width="35px" height="35px"></a>
                         </p>
                 </div>
                     <div class="body-card">
@@ -110,11 +110,11 @@
                                 </div>
                             </div>
                             <script>
-                                // When the user clicks the button, open the modal 
+                                // When the user clicks the button, open the modal
                                 document.getElementById("myBtn"+{{hospital.telephone}}).onclick = function() {
                                     document.getElementById('myModal'+{{hospital.telephone}}).style.display = "block";
                                 }
-                                
+
                                 // When the user clicks on <span> (x), close the modal
                                 document.getElementById("close"+{{hospital.telephone}}).onclick = function() {
                                     document.getElementById('myModal'+{{hospital.telephone}}).style.display = "none";
@@ -135,7 +135,7 @@
                                         i.style.display = "none";
                                         l.style.display = "block";
                                     }
-                                    
+
                                 }
                             </script>
                         @endeach
@@ -147,8 +147,8 @@
                 <div class="title-card">
                         <p style="margin-top:10px;" onclick="mostrarHoteles();">
                                 Hoteles
-                                <a href="#" id="upHotel" style="display:none;"><img src="{{assetsUrl('up.png')}}" width="35px" height="35px"></a>
-                                <a href="#" id="downHotel" style="display:block;"><img src="{{assetsUrl('down.png')}}" width="35px" height="35px"></a>
+                                <a id="upHotel" style="display:none;"><img src="{{assetsUrl('up.png')}}" width="35px" height="35px"></a>
+                                <a id="downHotel" style="display:block;"><img src="{{assetsUrl('down.png')}}" width="35px" height="35px"></a>
                             </p>
                 </div>
                 <div class="body-card">
@@ -184,7 +184,7 @@
 
 <script>
 
-// When the user clicks the button, open the modal 
+// When the user clicks the button, open the modal
 document.getElementById("myBtn"+{{hotel.id}}).onclick = function() {
     document.getElementById('myModal'+{{hotel.id}}).style.display = "block";
 }
@@ -217,7 +217,7 @@ document.getElementById("close"+{{hotel.id}}).onclick = function() {
                                         i.style.display = "none";
                                         l.style.display = "block";
                                     }
-                                    
+
                                 }
 </script>
                         @endeach
