@@ -46,7 +46,7 @@ class UserController {
             return response.status(200).json({
                 mensaje: "Bienvenido",
                 data: token
-            }); ﬁ
+            });
 
         } catch (error) {
             return response.status(401).json({
