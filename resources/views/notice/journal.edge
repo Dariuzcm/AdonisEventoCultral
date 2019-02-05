@@ -5,9 +5,8 @@
     </div>   
 <div class="content-fluid">
     @endif
-
     <div class="carousel slide" id="carousel" data-ride="carousel">
-            <div class="carousel-inner">
+            <div class="carousel-inner h-100">
                     <div class="carousel-item active">
                             <center>
                                 <div class="card-img-top">  
@@ -19,20 +18,24 @@
                                  </div></center>
                     </div>
                     
-@each(notice in notices) 
-        <div  class="carousel-item card col">
-<center>
-
-            <div class="card-img-top">  
-            <img  height="200px" width="300px" src="{{assetsUrl(notice.image)}}" alt="Card image cap">
-            </div>
-            <div class="card-body">
-            <h5 class="card-title">{{notice.name}}</h5>
-            <p class="card-text">{{notice.created_at}} por: <strong>{{notice.autor}}</strong></p>
-            <a href="/notice/details/{{notice.id}}" class="btn btn-primary">Ver Noticia completa</a>
-        </div>
-</center>
+                    <!--
+                <div class="carousel-item">
+  <img src="..." alt="...">
+  <div class="carousel-caption d-none d-md-block">
+    <h5>...</h5>
+    <p>...</p>
+  </div>
 </div>
+                -->
+@each(notice in notices) 
+        <div class="carousel-item" >
+           <img src="{{assetsUrl(notice.image)}}" class="d-block w-100" style="max-height: 450px;" alt="Card image cap">
+           <div class="carousel-caption d-none d-md-block">
+                <h5>{{notice.name}} por: <strong>{{notice.autor}}</strong></h5>
+                <p>{{notice.created_at}}</p>
+                <a href="/notice/details/{{notice.id}}" class="btn btn-primary">Ver Noticia completa</a>
+           </div>
+      </div>
       @endeach
 </div>
 <a class="carousel-control-prev btn-primary" href="#carousel" role="button" data-slide="prev">
