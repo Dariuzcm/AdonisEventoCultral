@@ -42,3 +42,5 @@ Route.get("/admin", "UserController.showPage");
 Route.group(() => {
     //Route.get("/cp", "UserController.showAdminPage");
 }).prefix("admin").middleware(["auth:jwt"]);
+
+Route.get('/deportes','IndexController.goToSports')

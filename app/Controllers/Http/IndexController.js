@@ -22,6 +22,10 @@ class IndexController {
             restaurants: restaurant.toJSON()
         })
     }
+
+    async goToSports({view}){
+        return view.render('deportes')
+    }
 }
 
 module.exports = IndexController

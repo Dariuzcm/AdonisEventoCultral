@@ -113,15 +113,63 @@ div.main{
   background-color: white;
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   margin-top: 3%;
-  max-width: 95%;
-  min-width: 700px;
+  width: 95%;
+  height:auto;
+  /*min-width: 700px;*/
 }
+/* backgrounds for the index cards classifications */
+.sports{
+  color:#ffffff;
+  background-color: orange; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, orange , white);/* Standard syntax (must be last) */
+}
+.culture{
+  color:#ffffff;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, red , white); /* Standard syntax (must be last) */
+}
+.medals{
+  color:#ffffff;
+  background-color: #007bff; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #007bff , white); /* Standard syntax (must be last) */
+}
+.guest{
+  color:#ffffff;
+  background-color: #4CAF50; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, #4CAF50 , white); /* Standard syntax (must be last) */
+}
+
+
+.sports-title{
+  color:#ffffff;
+  background-color: orange; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, orange , white);/* Standard syntax (must be last) */
+  text-align:left;
+  width:100%;
+  margin-bottom:2.5%;
+  padding:0.5%;
+}
+.image-wrapper {
+  width:90%;
+  margin:5%;
+  height: auto;
+  background-repeat: none;
+  background-size: cover;
+}
+.image-text{
+  width:100%;
+  height: 20%;
+  color:#ffffff;
+  text-align: left;
+  font-size: 100%;
+}
+
+
+
 .content-img{
   margin: 3%;
   margin-bottom: 5%;
 }
-
-
 /* Login Style*/
 .form-signin {
     max-width: 330px;
