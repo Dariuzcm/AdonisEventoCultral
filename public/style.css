@@ -122,6 +122,17 @@ div.main{
   color:#ffffff;
   background-color: orange; /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, orange , white);/* Standard syntax (must be last) */
+  align-content: center;
+  margin-left: 10%;
+}
+.sports-item{
+  display:inline-block;
+  margin-left:10%;
+  margin-bottom: 3%;
+}
+.sports-item div{
+  color: #000000;
+  min-width: 180px;
 }
 .culture{
   color:#ffffff;

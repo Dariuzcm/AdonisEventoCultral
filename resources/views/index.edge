@@ -1,36 +1,10 @@
 @layout('principal_layout')
 @section('content')
 <section id="notices" style='text-align:center;'>
-    <label for="notices"><h1>Noticias</h1></label>
-    @include('notice/journal')
+        @include('notice/journal')
 </section>
 <section id="sports">
-        <div class="container main sports">
-                <a href="/deportes"><label for="sports" style='color:#ffffff;cursor:pointer;display:inline-block;'><h1>Deportes</h1></label></a>
-                <div style='margin-top:10px;margin-left:15px;color:#000000;text-align:center;display:inline-block;'>
-                    <div style="display:inline-block;margin-left:5px;">
-                        <div><img src="{{assetsUrl('sports/soccer.png')}}" alt="soccer" width='30px' height='30px'></div>
-                        <div>F&uacute;tbol</div>
-                    </div>
-                    
-                    <div style="display:inline-block;margin-left:5px;">
-                        <div><img src="{{assetsUrl('sports/volleyball.png')}}" alt="volleyball" width='30px' height='30px'></div>
-                        <div>Voleibol</div>
-                    </div>
-                    <div style="display:inline-block;margin-left:5px;">
-                        <div><img src="{{assetsUrl('sports/atletismo.png')}}" alt="atletismo" width='30px' height='30px'></div>
-                        <div>Atletismo</div>
-                    </div>
-                    <div style="display:inline-block;margin-left:5px;">
-                        <div><img src="{{assetsUrl('sports/basketball.png')}}" alt="basketball" width='30px' height='30px'></div>
-                        <div>B&aacute;squetbol</div>
-                    </div>
-                    <div style="display:inline-block;margin-left:5px;">
-                        <div><img src="{{assetsUrl('sports/softball.png')}}" alt="softball" width='30px' height='30px'></div>
-                        <div>Softbol</div>
-                    </div>
-                </div>
-        </div>
+   @include('sports/index')
 </section>
 <section id="culture">
     <div class="container main culture">
