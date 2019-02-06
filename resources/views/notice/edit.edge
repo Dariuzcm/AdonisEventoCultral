@@ -1,5 +1,5 @@
-@layout('principal_layout')
-@section('content')
+@layout('admin/adminlayout')
+@section('container')
 
     <div class="container">
         
@@ -44,7 +44,7 @@
             <input type="text" name="autor" placeholder="Nombre de autor" class="form-control col-md-5" value="{{notice.autor}}" required>
             </div>
                 <br>
-    <a href="back" class="btn btn-light">Regresar</a>
+    <a href="/notice/editar-lista" class="btn btn-light">Regresar</a>
     <center><button type="submit" class="btn btn-primary">Actualizar Noticia</button></center>
 
         </form>
