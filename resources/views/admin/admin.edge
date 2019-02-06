@@ -1,56 +1,26 @@
-@layout('principal_layout')
-@section('content')
-{{style('css/sidebar.css')}}
-<div class="wrapper">
-        <!-- Sidebar  -->
-        <nav id="sidebar">
-            <div class="sidebar-header">
-                <h3>Administrador</h3>
-            </div>
-
-            <ul class="list-unstyled components">
-                <p>Administrar: </p>
-                
-                <li>
-                    <a href="#">Noticias</a>
-                </li>
-                <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Puntajes</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Deportes</a>
-                        </li>
-                        <li>
-                            <a href="#">Culturales</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#">Universidades</a>
-                </li>
-            </ul>
-        </nav>
-
-        <!-- Page Content  -->
-        <div id="content" class="container">
+@layout('admin/adminlayout')
+@section('container')
+        <div class="container main">
+            <label for="notices"><h2>Noticias</h2></label>
             <section id="notices">
-                <div class="container main">
-                    <label for="notices"><h2>Noticias</h2></label>
                     <div class="content-img">
-                        <a class="btn btn-dark" href="/notice/addNotice" ><img src="{{assetsUrl('img/admin/add_notice.png')}}"><br>Nueva Noticia</a>
+                        <a id="addNotice" class="btn btn-dark" href="/notice/addNotice"><img src="{{assetsUrl('img/admin/add_notice.png')}}"><br>Nueva Noticia</a>
                         <a class="btn btn-dark" href="#"><img src="{{assetsUrl('img/admin/update_notice.png')}}"><br>Listar Noticia</a>
                     <br><br>
+                        <div id="noticePanel" class="container">
+                        </div>
                     </div>
-                </div>
             </section>
+        </div>
+
             <section id="Puntajes">
                     <div class="container-fluid main">
                         <label for="puntajes"><h2>Puntajes</h2></label>
                         <div class="content-img">
                             <h4>Deportes</h4>
                             <div class="content-img">
-                                    <a class="btn btn-dark" href="#"><img src="{{assetsUrl('img/admin/add_notice.png')}}"><br>Nueva Noticia</a>
-                                    <a class="btn btn-dark" href="#"><img src="{{assetsUrl('img/admin/update_notice.png')}}"><br>Listar Noticia</a>        
+                                    <a class="btn btn-dark" ><img src="{{assetsUrl('img/admin/add_notice.png')}}"><br>Nueva Noticia</a>
+                                    <a class="btn btn-dark" ><img src="{{assetsUrl('img/admin/update_notice.png')}}"><br>Listar Noticia</a>        
                             </div>
                             <h4>Culturales</h4>
                             <div class="content-img">
@@ -74,6 +44,5 @@
              </section>
 
             </div>
-        </div>
-    </div>
+        
 @endsection

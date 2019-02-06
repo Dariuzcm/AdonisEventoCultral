@@ -64,7 +64,7 @@ class NoticeController {
                     message: "<strong>Advertencia</strong>: No has iniciado sesion.",
                 }
             })
-            return view.render('auth.login')
+            return (error)
         }
 
     }
