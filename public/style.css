@@ -1,8 +1,16 @@
 
 .grey-background{
-  background-color:#f1f4f5;
+  background-image: url('edificio_entrada_B.jpg');
+  background-color:rgba(70, 189, 46, 0.808);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Do not repeat the image */
 }
 /* styles for the card */
+.first{
+  background-color: rgba(255, 255, 255, 0.719);
+}
 .title-card{
   background-color:rgba(56, 138, 59, 0.986);
   border-top-left-radius:5px;
@@ -55,7 +63,15 @@
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
 }
-
+#title{
+  text-align: center;
+  align-self: flex-start;
+}
+#title span{
+  text-shadow:  2px 2px rgba(0, 0, 0, 0.849);
+  font-size: 200% ;
+  color: rgb(11, 196, 104);
+}
 /* Modal Content */
 .modal-content {
   position: relative;
@@ -120,7 +136,7 @@ div.main{
 }
 /* backgrounds for the index cards classifications */
 .sports{
-  background-color: orange; /* For browsers that do not support gradients */
+  background-color: rgba(255, 166, 0, 0.9); /* For browsers that do not support gradients */
  /* background-image: linear-gradient(to right, orange , white);/* Standard syntax (must be last) */
   align-content: center;
   margin-left: 10%;
@@ -136,7 +152,7 @@ div.main{
 }
 .culture{
   color:#ffffff;
-  background-color: red; /* For browsers that do not support gradients */
+  background-color: rgba(255, 0, 0, 0.9); /* For browsers that do not support gradients */
  /* background-image: linear-gradient(to right, red , white);  Standard syntax (must be last) */
 }
 .culture-title{
@@ -150,12 +166,12 @@ div.main{
 }
 .medals{
   color:#ffffff;
-  background-color: #007bff; /* For browsers that do not support gradients */
+  background-color: #0059fff6; /* For browsers that do not support gradients */
 /*  background-image: linear-gradient(to right, #007bff , white); /* Standard syntax (must be last) */
 }
 .medals-title{
   color:#ffffff;
-  background-color: #007bff; /* For browsers that do not support gradients */
+  background-color: rgba(0, 89, 255, 0.9); /* For browsers that do not support gradients */
   background-image: linear-gradient(to right, black, #007bff );/* Standard syntax (must be last) */
   text-align:left;
   width:100%;
@@ -164,7 +180,7 @@ div.main{
 }
 .guest{
   color:#ffffff;
-  background-color: #4CAF50; /* For browsers that do not support gradients */
+  background-color: rgba(76, 175, 79, 0.9); /* For browsers that do not support gradients */
  /* background-image: linear-gradient(to right, #4CAF50 , white); /* Standard syntax (must be last) */
 }
 .guest-title{
