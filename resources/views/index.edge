@@ -10,16 +10,13 @@
    @include('indexSections/culture-section')
 </section>
 <section id="medallero">
-        <div class="container main medals">
-            <label for="medallero"><h1>Medallero</h1></label>
-            <div class="containet-fluid">
-                contenido
-            </div>
-        </div>
+    @include('indexSections/medals-section')
 </section>
 <section id="places">
-    <div class="container main guest">
-    <label for="places"><h1>Invitados</h1></label>
+    <div class="container main guest ">
+        <div class="row guest-title">
+            <label for="places"><h1>Invitados</h1></label>
+        </div>
     @include('lugares')
 </div>
 </section>

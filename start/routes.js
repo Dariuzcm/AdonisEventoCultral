@@ -33,7 +33,16 @@ Route.group(()=>{
 
 Route.get('/places','PlaceController.showLugares')
 Route.get('/places/hotel/:id', 'PlaceController.showHotel')
-
+//----------------Disciples routes-------------------
+Route.group(()=>{
+    Route.get('/addDisciple','DisciplinaController.getForm')
+    Route.post('/addDisciple','DisciplinaController.addDisciple')
+    Route.get('/details/:id','DisciplinaController.getDetails')
+    Route.get('/editar/:id','DisciplinaController.getEdit')
+    Route.put('/editar/:id','DisciplinaController.edit')
+    Route.delete('/delete/:id','DisciplinaController.destroy')
+    Route.get('/showAll','DisciplinaController.getList')
+}).prefix('disciplina')
 //----------------Admin Routes ----------------------
 Route.post("/registrar", "UserController.registrar");
 Route.post("/login", "UserController.login");

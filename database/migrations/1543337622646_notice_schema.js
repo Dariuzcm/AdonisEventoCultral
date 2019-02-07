@@ -5,7 +5,7 @@ const Schema = use('Schema')
 
 class NoticeSchema extends Schema {
   up () {
-    this.create('notices', (table) => {
+    this.createIfNotExists('notices', (table) => {
       table.increments()
       table.string('name')
       table.text('content','longtext')

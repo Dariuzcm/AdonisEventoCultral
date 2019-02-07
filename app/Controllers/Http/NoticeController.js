@@ -48,9 +48,9 @@ class NoticeController {
                 }
             })
 
-            return response.redirect('/addNotice')
+            return response.redirect('notice/addNotice')
         }
-        return response.redirect('/journal')
+        return response.redirect('notice/editar-lista')
     }
 
     async getForm({ view, session }) {
@@ -61,7 +61,7 @@ class NoticeController {
             session.flash({
                 notification: {
                     type: 'danger',
-                    message: "<strong>Advertencia</strong>: No has iniciado sesion.",
+                    message: "<strong>Advertencia</strong>: Ni tienes permiso para estar aqui.",
                 }
             })
             return (error)

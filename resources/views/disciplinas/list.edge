@@ -1,0 +1,17 @@
+@layout('admin/adminlayout')
+@section('container')
+<h1>Lista de Disciplinas</h1>
+    <table class="table">
+        <th>Nombre de Disciplina </th>
+        <th>Tipo</th>
+        <th></th>
+      @each(disc in disc)
+        <tr>
+            <td>{{disc.name}}</td>
+            <td>{{disc.clase}}</td>
+            <td><a href="/disciplina/editar/{{disc.id}}" class="btn btn-primary">Editar</a>
+                <form action="/disciplina/delete/{{disc.id}}?_method=DELETE" method="post">{{ csrfField() }}<button class="btn btn-danger" type="submit">Eliminar</button></form>
+        </tr>
+      @endeach
+    </table>
+@endsection

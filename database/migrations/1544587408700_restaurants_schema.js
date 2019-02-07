@@ -5,7 +5,7 @@ const Schema = use('Schema')
 
 class RestaurantsSchema extends Schema {
   up () {
-    this.create('restaurants', (table) => {
+    this.createIfNotExists('restaurants', (table) => {
       table.increments()
       table.string('name')
       table.string('description')

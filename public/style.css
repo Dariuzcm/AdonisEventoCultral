@@ -4,7 +4,7 @@
 }
 /* styles for the card */
 .title-card{
-  background-color:#04aef7;
+  background-color:rgba(56, 138, 59, 0.986);
   border-top-left-radius:5px;
   border-top-right-radius:5px;
   padding:1px;
@@ -110,18 +110,18 @@
 .modal-body {padding: 2px 16px;}
 
 div.main{
-  background-color: white;
+  /*background-color: white;*/
   box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   margin-top: 3%;
+  margin-bottom: 3%;
   width: 95%;
   height:auto;
   /*min-width: 700px;*/
 }
 /* backgrounds for the index cards classifications */
 .sports{
-  color:#ffffff;
   background-color: orange; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to right, orange , white);/* Standard syntax (must be last) */
+ /* background-image: linear-gradient(to right, orange , white);/* Standard syntax (must be last) */
   align-content: center;
   margin-left: 10%;
 }
@@ -137,24 +137,51 @@ div.main{
 .culture{
   color:#ffffff;
   background-color: red; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to right, red , white); /* Standard syntax (must be last) */
+ /* background-image: linear-gradient(to right, red , white);  Standard syntax (must be last) */
+}
+.culture-title{
+  color:#ffffff;
+  background-color: red; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, black, red );/* Standard syntax (must be last) */
+  text-align:left;
+  width:100%;
+  margin-bottom:2.5%;
+  padding:0.5%;
 }
 .medals{
   color:#ffffff;
   background-color: #007bff; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to right, #007bff , white); /* Standard syntax (must be last) */
+/*  background-image: linear-gradient(to right, #007bff , white); /* Standard syntax (must be last) */
+}
+.medals-title{
+  color:#ffffff;
+  background-color: #007bff; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, black, #007bff );/* Standard syntax (must be last) */
+  text-align:left;
+  width:100%;
+  margin-bottom:2.5%;
+  padding:0.5%;
 }
 .guest{
   color:#ffffff;
   background-color: #4CAF50; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to right, #4CAF50 , white); /* Standard syntax (must be last) */
+ /* background-image: linear-gradient(to right, #4CAF50 , white); /* Standard syntax (must be last) */
+}
+.guest-title{
+  color:#ffffff;
+  background-color: #4CAF50; /* For browsers that do not support gradients */
+  background-image: linear-gradient(to right, black, #4CAF50 );/* Standard syntax (must be last) */
+  text-align:left;
+  width:100%;
+  margin-bottom:2.5%;
+  padding:0.5%;
 }
 
 
 .sports-title{
   color:#ffffff;
   background-color: orange; /* For browsers that do not support gradients */
-  background-image: linear-gradient(to right, orange , white);/* Standard syntax (must be last) */
+  background-image: linear-gradient(to right, black, orange );/* Standard syntax (must be last) */
   text-align:left;
   width:100%;
   margin-bottom:2.5%;
@@ -175,7 +202,9 @@ div.main{
   font-size: 100%;
 }
 
-
+.c-text{
+  background-color: rgba(0, 0, 0, 0.5)
+}
 
 .content-img{
   margin: 3%;

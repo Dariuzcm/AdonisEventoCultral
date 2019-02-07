@@ -5,7 +5,7 @@ const Schema = use('Schema')
 
 class HotelsSchema extends Schema {
   up () {
-    this.create('hotels', (table) => {
+    this.createIfNotExists('hotels', (table) => {
       table.increments()
       table.string('name')
       table.decimal('price',7,2)

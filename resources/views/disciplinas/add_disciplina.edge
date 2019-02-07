@@ -1,0 +1,20 @@
+@layout('admin/adminlayout')
+@section('container')
+<div class="container">
+    <h1>Añadir disciplina</h1>
+    <form action="/disciplina/addDisciple" method="post" class="form container">
+        {{ csrfField() }}
+        <div class="form-group">
+            <input class="form-control" type="text" name="name" placeholder="Nombre de Disciplina" required>
+        </div>
+        <div class="form-group">
+            <select name="clase" class="form-control" >
+                <option>Selecciona tipo de disciplina</option>
+                <option value="deportivo">Deportiva</option>
+                <option value="cultural">Cultural</option>
+            </select>
+        </div>
+        <button class="form-control btn btn-success" type="submit">Registrar</button>
+    </form>
+</div>
+@endsection
