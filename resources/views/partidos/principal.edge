@@ -1,0 +1,31 @@
+@layout('admin/adminlayout')
+@section('container')
+    <center> <h1>Selecciona las opciones para iniciar el rol</h1></center>
+<form class="form container col-6 bg-light" action="/partido/begin" method="post">
+      {{ csrfField() }}
+   <div class="form-group"> 
+       <label for="equip">Numero de Equipos:</label>
+        <select class="form-control" name="nEquipo" id="equip">
+            <option>Selecciona </option>
+           <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+        </select></div>
+     <div class="form-group">
+        <label for="disc">Disciplina:</label>
+        <select name="disciplina" class="form-control">
+            <option>Selecciona</option>
+            @each(item in disc)
+            <option value="{{item.id}}">{{item.name}}</option>
+            @endeach
+        </select>
+    </div>   
+    <div class="form-group">
+        <center><button class="form-control col-3" type="submit">comenzar</button></center>
+        <br>
+    </div>
+  </form>
+@endsection

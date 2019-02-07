@@ -1,6 +1,7 @@
 'use strict'
 const Disc= use('App/Models/Disciplina')
 class DisciplinaController {
+
     async addDisciple({request, session, response}){
         const disc= await Disc.create({
             name: request.input('name'),

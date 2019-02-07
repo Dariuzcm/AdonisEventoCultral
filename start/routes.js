@@ -50,6 +50,11 @@ Route.get("/admin", "UserController.showPage");
 
 Route.group(() => {
     //Route.get("/cp", "UserController.showAdminPage");
-}).prefix("admin").middleware(["auth:jwt"]);
+}).prefix("admin")
+//....................Partidos.....................
+Route.group(()=>{
+    Route.get("/GenerarPartido","PartidoController.PartGen")
+    Route.post("/begin","PartidoController.begin")
+}).prefix("partido")
 
 Route.get('/deportes','IndexController.goToSports')
