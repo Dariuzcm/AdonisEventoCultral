@@ -48,9 +48,9 @@ class NoticeController {
                 }
             })
 
-            return response.redirect('notice/addNotice')
+            return response.redirect('/notice/addNotice')
         }
-        return response.redirect('notice/editar-lista')
+        return response.redirect('/notice/editar-lista')
     }
 
     async getForm({ view, session }) {
