@@ -33,6 +33,7 @@ class PartidoController {
                                 return view.render('partidos.size3')
                             }
     }
+    
 }
 
 module.exports = PartidoController

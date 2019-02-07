@@ -1,52 +1,42 @@
 @layout('admin/adminlayout')
 @section('container')
-  <div class="container">
-      <div class="row">
-          <div class="col">
+  <div class="container-fluid">
+      <div class="row form w-100 justify-content-center">
+        <div class="col-1 bg-light main">
+            <h1>N°</h1>
+            <div class="row form-control"><center><h4>1</h4></center></div>
+            <div class="row form-control"><center><h4>2</h4></center></div>
+            <div class="row form-control"><center><h4>3</h4></center></div>
+
+        </div>
+          <div class="col-9 bg-light main">
               <h1>Rol de Juegos</h1>
-              <div class="row">
-                  <input type="text" name="" id="a2"><strong>vs</strong><input type="text" name="" id="a4">
+              <div class="row from-group">
+                  <input class="form-control col-5" readonly type="text" name="" id="11"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="" id="12">
               </div>
               <div class="row">
-                  <input type="text" name="" id="a2"><strong>vs</strong><input type="text" name="" id="a4">
+                  <input class="form-control col-5" readonly type="text" name="" id="21"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="" id="22">
               </div>
               <div class="row">
-                  <input type="text" name="" id="a2"><strong>vs</strong><input type="text" name="" id="a4">
+                  <input class="form-control col-5" readonly type="text" name="" id="31"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="" id="32">
               </div>
-              <div class="row">
-                  <input type="text" name="" id="a2"><strong>vs</strong><input type="text" name="" id="a4">
-              </div>    
+                                
           </div>
           
-          <div class="col">
+          <div class="col-2 bg-light main">
                 <h1>Grupo A</h1>
                 <div class="row">
-                  <input type="text" name="" id="">
+                  <input class="form-control col" type="text" placeholder="Primero" name="" id="A1">
                 </div>
                 <div class="row">
-                  <input type="text" name="" id="">
+                  <input class="form-control col" type="text" placeholder="Segundo" name="" id="A2">
                 </div>
                 <div class="row">
-                  <input type="text" name="" id="">
-                </div>
-                <div class="row">
-                  <input type="text" name="" id="">
-                </div>
-                <h1>Grupo B</h1>
-                <div class="row">
-                  <input type="text" name="" id="">
-                </div>
-                <div class="row">
-                  <input type="text" name="" id="">
-                </div>
-                <div class="row">
-                  <input type="text" name="" id="">
-                </div>
-                <div class="row">
-                  <input type="text" name="" id="">
+                  <input class="form-control col" type="text" placeholder="Tercero" name="" id="A3">
                 </div>
           </div>
         </div>
       </div>
   </div>
+  {{ script('js/partidos/partidos3') }}  
 @endsection
