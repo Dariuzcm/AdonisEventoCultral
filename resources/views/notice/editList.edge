@@ -2,7 +2,7 @@
 @section('container')
   <h1>Lista de Noticias</h1>
 
-<table class="table">
+<table class="table bg-light">
     <th>Fecha </th>
     <th>Titulo</th>
     <th></th>
@@ -13,9 +13,10 @@
         border-radius: 4px;
         padding: 5px;
         width: 150px;">{{notice.name}}</td>
-    <td><a href="/notice/editar/{{notice.id}}" class="btn btn-primary">Editar</a>
+    <td><div class="row"><a href="/notice/editar/{{notice.id}}" class="btn btn-primary">Editar</a>
     <form action="/notice/delete/{{notice.id}}?_method=DELETE" method="post">{{ csrfField() }}<button class="btn btn-danger" type="submit">Eliminar</button></form>
-    </td>
+  </div>
+  </td>
     </tr>
   @endeach
 </table>

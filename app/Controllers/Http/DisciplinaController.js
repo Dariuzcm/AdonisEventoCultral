@@ -4,7 +4,7 @@ class DisciplinaController {
     async addDisciple({request, session, response}){
         const disc= await Disc.create({
             name: request.input('name'),
-            class: request.input('clase'),
+            clase: request.input('clase'),
         })
         try {
             await disc.save()
