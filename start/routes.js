@@ -55,6 +55,14 @@ Route.group(() => {
 Route.group(()=>{
     Route.get("/GenerarPartido","PartidoController.PartGen")
     Route.post("/begin","PartidoController.begin")
+    Route.post("/rol-reg","PartidoController.addRol")
 }).prefix("partido")
+//....................Universidad.....................
+Route.group(()=>{
+    Route.get('Añadir','UniversidadController.addUniv')
+    Route.get('editar-lista','UniversidadController.getList')
+    Route.put('editar/:id','UniversidadController.getEdit')
+    Route.delete('delete/:id')
+}).prefix("univ")
 
 Route.get('/deportes','IndexController.goToSports')

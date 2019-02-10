@@ -7,7 +7,6 @@ $(document).ready(()=>{
         $("#51").val(ax);
 
     });
-
     $("#A2").change(()=>{
         var ax = $("#A2").val();
 
@@ -15,7 +14,6 @@ $(document).ready(()=>{
         $("#31").val(ax);
         $("#62").val(ax);
     });
-
     $("#A3").change(()=>{
         var ax = $("#A3").val();
 
@@ -23,7 +21,6 @@ $(document).ready(()=>{
         $("#32").val(ax);
         $("#52").val(ax);
     });
-
     $("#A4").change(()=>{
         var ax = $("#A4").val();
 

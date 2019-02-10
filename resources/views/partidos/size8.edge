@@ -1,69 +1,74 @@
 @layout('admin/adminlayout')
 @section('container')
+<form action="/partido/rol-reg" method="post">
+    
+    <input type="text" class="col-1" name="size" readonly value="8">
+
+    {{ csrfField() }}
   <div class="">
       <div class="row form w-100">
         <div class="col-sm bg-light main">
-            <h1>N°</h1>
-            <div class="row form-control justify-content-center"><center><h4>1</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>2</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>3</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>4</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>5</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>6</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>7</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>8</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>9</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>10</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>11</h4></center></div>
-            <div class="row form-control justify-content-center"><center><h4>12</h4></center></div>
+            <h2>N°</h2>
+            <div class="row form-control justify-content-center"><center><h6>1</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>2</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>3</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>4</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>5</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>6</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>7</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>8</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>9</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>10</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>11</h6></center></div>
+            <div class="row form-control justify-content-center"><center><h6>12</h6></center></div>
 
         </div>
           <div class="col-9 bg-light main justify-content-center">
-              <h1>Rol de Juegos</h1>
+              <h2>Rol de Juegos</h2>
               <div class="row from-group ">
-                  <input class="form-control col-5" readonly type="text" name="11" id="11"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="12" id="12">
+                  <input class="form-control col-5" readonly type="text" name="11" id="11"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="12" id="12">
               </div>
               <div class="row">
-                  <input class="form-control col-5" readonly type="text" name="21" id="21"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="22" id="22">
+                  <input class="form-control col-5" readonly type="text" name="21" id="21"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="22" id="22">
               </div>
               <div class="row">
-                  <input class="form-control col-5" readonly type="text" name="31" id="31"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="32" id="32">
+                  <input class="form-control col-5" readonly type="text" name="31" id="31"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="32" id="32">
               </div>
               <div class="row">
-                <input class="form-control col-5" readonly type="text" name="41" id="41"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="42" id="42">
+                <input class="form-control col-5" readonly type="text" name="41" id="41"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="42" id="42">
             </div>    
                 <div class="row">
-                    <input class="form-control col-5" readonly type="text" name="51" id="51"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="52" id="52">
+                    <input class="form-control col-5" readonly type="text" name="51" id="51"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="52" id="52">
                 </div>  
                 <div class="row">
-                    <input class="form-control col-5" readonly type="text" name="61" id="61"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="62" id="62">
+                    <input class="form-control col-5" readonly type="text" name="61" id="61"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="62" id="62">
                  </div>  
                  <div class="row">
-                    <input class="form-control col-5" readonly type="text" name="71" id="71"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="72" id="72">
+                    <input class="form-control col-5" readonly type="text" name="71" id="71"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="72" id="72">
                 </div>  
                 <div class="row">
-                    <input class="form-control col-5" readonly type="text" name="81" id="81"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="82" id="82">
+                    <input class="form-control col-5" readonly type="text" name="81" id="81"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="82" id="82">
                 </div>  
                 <div class="row">
-                <input class="form-control col-5" readonly type="text" name="91" id="91"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="92" id="92">
+                <input class="form-control col-5" readonly type="text" name="91" id="91"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="92" id="92">
                 </div>  
                 <div class="row">
-                    <input class="form-control col-5" readonly type="text" name="101" id="101"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="102" id="102">
+                    <input class="form-control col-5" readonly type="text" name="101" id="101"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="102" id="102">
                 </div>  
                 <div class="row">
-                    <input class="form-control col-5" readonly type="text" name="111" id="111"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="112" id="112">
+                    <input class="form-control col-5" readonly type="text" name="111" id="111"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="112" id="112">
                 </div>  
                 <div class="row">
-                    <input class="form-control col-5" readonly type="text" name="121" id="121"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="122" id="122">
+                    <input class="form-control col-5" readonly type="text" name="121" id="121"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="122" id="122">
                 </div>  
                 <div class="row">
                     <label for="semi">SEMIFINAL</label>
             </div>  
                <div class="row">
-                    <input class="form-control col-5" readonly type="text" name="131" id="131" value="PRIMER LUGAR GRUPO A"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="132" id="132" value="SEGUNDO LUGAR GRUPO B">
+                    <input class="form-control col-5" readonly type="text" name="131" id="131" value="PRIMER LUGAR GRUPO A"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="132" id="132" value="SEGUNDO LUGAR GRUPO B">
               </div>
                 <div class="row">
-                  <input class="form-control col-5" readonly type="text" name="141" id="141" value="PRIMER LUGAR GRUPO B"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="142" id="142" value=" SEGUNDO LUGAR GRUPO A">
+                  <input class="form-control col-5" readonly type="text" name="141" id="141" value="PRIMER LUGAR GRUPO B"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="142" id="142" value=" SEGUNDO LUGAR GRUPO A">
               </div>  
               <div class="final">
                 <div class="row">
@@ -71,7 +76,7 @@
               </div>
             </div>
                 <div class="row">
-                  <input class="form-control col-5" readonly type="text" name="151" id="151" value="GANADOR DE SEMIFINAL"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="152" id="152" value="GANADOR DE SEMIFINAL">
+                  <input class="form-control col-5" readonly type="text" name="151" id="151" value="GANADOR DE SEMIFINAL"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="152" id="152" value="GANADOR DE SEMIFINAL">
               </div>  
               <div class="third">
                 <div class="row">
@@ -79,40 +84,45 @@
             </div>
           </div>
                   <div class="row">
-                  <input class="form-control col-5" readonly type="text" name="161" id="161" value="PERDEDOR DE SEMIFINAL"><strong><h4>vs</h4></strong><input class="form-control col-5" readonly type="text" name="162" id="162" value="PERDEROR DE SEMIFINAL">
+                  <input class="form-control col-5" readonly type="text" name="161" id="161" value="PERDEDOR DE SEMIFINAL"><strong><h6>vs</h6></strong><input class="form-control col-5" readonly type="text" name="162" id="162" value="PERDEROR DE SEMIFINAL">
               </div>  
           </div>
           
           <div class="col-2 bg-light main">
-                <h1>Grupo A</h1>
+                <h2>Grupo A</h2>
                 <div class="row">
-                  <input class="form-control col" type="text" placeholder="Primero " name="A1" id="A1">
+                  <input class="form-control col" type="text" placeholder="Primero " required name="A1" id="A1">
                 </div>
                 <div class="row">
-                  <input class="form-control col" type="text" placeholder="Segundo " name="A2" id="A2">
+                  <input class="form-control col" type="text" placeholder="Segundo " required name="A2" id="A2">
                 </div>
                 <div class="row">
-                  <input class="form-control col" type="text" placeholder="Tercero " name="A3" id="A3">
+                  <input class="form-control col" type="text" placeholder="Tercero " required name="A3" id="A3">
                 </div>
                 <div class="row">
-                  <input class="form-control col" type="text" placeholder="Cuarto "name="A4" id="A4">
+                  <input class="form-control col" type="text" placeholder="Cuarto " required name="A4" id="A4">
                 </div>
-                <h1>Grupo B</h1>
+                <h2>Grupo B</h2>
                 <div class="row">
-                  <input class="form-control col" type="text" placeholder="Primero " name="B1" id="B1">
-                </div>
-                <div class="row">
-                  <input class="form-control col" type="text" placeholder="Segundo " name="B2" id="B2">
+                  <input class="form-control col" type="text" placeholder="Primero " required name="B1" id="B1">
                 </div>
                 <div class="row">
-                  <input class="form-control col" type="text" placeholder="Tercero "name="B3" id="B3">
+                  <input class="form-control col" type="text" placeholder="Segundo " required name="B2" id="B2">
                 </div>
                 <div class="row">
-                  <input class="form-control col" type="text" placeholder="Cuarto " name="B4" id="B4">
+                  <input class="form-control col" type="text" placeholder="Tercero " required name="B3" id="B3">
+                </div>
+                <div class="row">
+                  <input class="form-control col" type="text" placeholder="Cuarto " required name="B4" id="B4">
+                </div>
+                <div class="row">
+                    <button class="form-control col btn btn-success" type="submit">Ingresar Rol</button>
                 </div>
           </div>
         </div>
       </div>
   </div>
+</form>
+
   {{ script('js/partidos/partidos8.js') }}  
 @endsection

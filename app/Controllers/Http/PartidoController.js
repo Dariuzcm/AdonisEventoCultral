@@ -33,7 +33,83 @@ class PartidoController {
                                 return view.render('partidos.size3')
                             }
     }
-    
+    async addRol({request}){
+        const size = request.input('size')
+        var content
+
+        switch (size) {
+            case 8:
+                content={
+                    grupoA: {   
+                        A1: request.input("A1"),
+                        A2: request.input("A2"),
+                        A3: request.input("A3"),
+                        A4: request.input("A4")
+                            },
+                    grupoB: {    
+                        B1: request.input("B1"),
+                        B2: request.input("B2"),
+                        B3: request.input("B3"),
+                        B4: request.input("B4")
+                    }
+                }
+                break;
+            case 7:
+                content={
+                    grupoA: {   
+                        A1: request.input("A1"),
+                        A2: request.input("A2"),
+                        A3: request.input("A3"),
+                        A4: request.input("A4")
+                            },
+                    grupoB: {    
+                        B1: request.input("B1"),
+                        B2: request.input("B2"),
+                        B3: request.input("B3"),
+                            }
+                    }
+                break;
+            case 6:
+                content={
+                    grupoA: {   
+                        A1: request.input("A1"),
+                        A2: request.input("A2"),
+                        A3: request.input("A3"),
+                            },
+                    grupoB: {    
+                        B1: request.input("B1"),
+                        B2: request.input("B2"),
+                        B3: request.input("B3"),
+                            }
+                    }
+                break;
+            case 5:
+                break;
+            case 4:
+                content={
+                    grupoA: {   
+                        A1: request.input("A1"),
+                        A2: request.input("A2"),
+                        A3: request.input("A3"),
+                        A4: request.input("A4")
+                            },
+                        }
+                break;
+            case 3:
+                content={
+                    grupoA: {   
+                        A1: request.input("A1"),
+                        A2: request.input("A2"),
+                        A3: request.input("A3"),
+                            },
+                    }
+                break;                    
+            default:
+                break;
+        }
+        
+
+    }
 }
 
 module.exports = PartidoController

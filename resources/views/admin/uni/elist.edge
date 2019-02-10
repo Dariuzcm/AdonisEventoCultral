@@ -1,0 +1,25 @@
+@layout('admin/adminlayout')
+@section('container')
+  <h1>Listado de Universidades</h1>
+@if(old('notification'))
+    <div class="alert alert-{{old('notification.type')}}">
+        {{{old('notification.message')}}}
+    </div>
+@endif
+  <table class="table">
+    <th>Icono</th>
+    <th>Imagen</th>
+    <th></th>
+    <tbody>
+    @each(univ in univ)
+    <tr><td>{{univ.name}}</td>
+        <td><img src="{{univ.img_route}}" width="30px" height="30px" alt="{{univ.name}}"></td>
+        <td><div class="row"><a href="/uni/editar/{{univ.id}}" class="btn btn-primary">Editar</a>
+            <form action="/uni/delete/{{univ.id}}?_method=DELETE" method="post">{{ csrfField() }}<button class="btn btn-danger" type="submit">Eliminar</button></form>
+          </td>
+    </tr>
+    @endeach
+    </tbody>
+    </tr>
+  </table>
+@endsection
