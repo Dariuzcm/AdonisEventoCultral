@@ -7,11 +7,13 @@
     </div>
 @endif
   <table class="table">
-    <th>Icono</th>
+    <tr><th>Nombre</th>
     <th>Imagen</th>
     <th></th>
+    </tr>
     <tbody>
     @each(univ in univ)
+    
     <tr><td>{{univ.name}}</td>
         <td><img src="{{univ.img_route}}" width="30px" height="30px" alt="{{univ.name}}"></td>
         <td><div class="row"><a href="/uni/editar/{{univ.id}}" class="btn btn-primary">Editar</a>

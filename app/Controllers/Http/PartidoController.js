@@ -9,6 +9,7 @@ class PartidoController {
             disc: disc.toJSON()
         })
     }
+    
     async begin({ view, request }) {
         const n_equip = request.input('nEquipo')
         const disc = request.input('disciplina')
@@ -107,7 +108,7 @@ class PartidoController {
             default:
                 break;
         }
-        
+
 
     }
 }

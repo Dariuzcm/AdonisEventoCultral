@@ -1,18 +1,17 @@
 @layout('admin/adminlayout')
 @section('container')
-<form action="/univ" method="post" class="form main">
+<div class="container bg-light">
+<form action="/univ/add" method="post" enctype="multipart/form-data" class="form main">
     {{ csrfField() }}
     <h3>Agregar universidad</h3>
-    <input type="text" name="nombre" placeholder="Nombre de Universidad" enctype="multipart/form-data" class="from-control">
+    <input type="text" name="nombre" placeholder="Nombre de Universidad"  class="form-control">
     <div class="row">
-        <label for="">Nombre de universidad</label><input type="text" name="nombre" id="">
+        <label for="file">Icono de Universidad: </label>
+        <input class="form-control" type="file" name="profile_pic"/>    
     </div>
-    <div class="row">
-        <label for="file">Icono de Universidad: </label><input id="file" type="file" name="foto">    
-    </div>
-    <div class="row">
-        <button type="submit">Ingresar</button>
+    <div class="col-3">
+        <button class="form-control btn btn-success" type="submit">Ingresar</button>
     </div>
 </form>
-  
+</div>
 @endsection

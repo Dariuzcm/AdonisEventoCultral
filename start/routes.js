@@ -59,10 +59,11 @@ Route.group(()=>{
 }).prefix("partido")
 //....................Universidad.....................
 Route.group(()=>{
-    Route.get('Añadir','UniversidadController.addUniv')
+    Route.get('add','UniversidadController.getForm')
+    Route.post('add','UniversidadController.addUniv')
     Route.get('editar-lista','UniversidadController.getList')
-    Route.put('editar/:id','UniversidadController.getEdit')
-    Route.delete('delete/:id')
+    Route.put('editar/:id','UniversidadController.update')
+    Route.delete('delete/:id',"UniversidadController.getEdit")
 }).prefix("univ")
 
 Route.get('/deportes','IndexController.goToSports')

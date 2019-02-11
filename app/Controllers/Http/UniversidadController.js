@@ -1,10 +1,16 @@
 'use strict'
 const Univ=use('App/Models/Universidad')
+const Helpers = use('Helpers')
 
 class UniversidadController {
 
-    async addUniv({request, session}){
-        const profilePic = request.file('foto', {
+    async getForm({view}){
+        return view.render('admin.uni.adduniv')
+    }
+
+    async addUniv({request, session,response}){
+        console.log(request)
+        const profilePic = request.file('profile_pic', {
             types: ['image'],
         })
 
@@ -47,6 +53,14 @@ class UniversidadController {
         const univ = await Univ.all()
 
         return view.render('uni.elist',{univ : univ.toJSON()})
+    }
+        
+    async update(request, response) {
+        
+    }
+    
+    async getEdit(){
+
     }
 }
 
