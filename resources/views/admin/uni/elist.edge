@@ -6,7 +6,7 @@
         {{{old('notification.message')}}}
     </div>
 @endif
-  <table class="table">
+  <table class="table bg-light">
     <tr><th>Nombre</th>
     <th>Imagen</th>
     <th></th>
@@ -15,7 +15,7 @@
     @each(univ in univ)
     
     <tr><td>{{univ.name}}</td>
-        <td><img src="{{univ.img_route}}" width="30px" height="30px" alt="{{univ.name}}"></td>
+        <td><img src="{{assetsUrl(univ.img_route)}}" width="30px" height="30px" alt="{{univ.name}}"></td>
         <td><div class="row"><a href="/uni/editar/{{univ.id}}" class="btn btn-primary">Editar</a>
             <form action="/uni/delete/{{univ.id}}?_method=DELETE" method="post">{{ csrfField() }}<button class="btn btn-danger" type="submit">Eliminar</button></form>
           </td>

@@ -26,7 +26,7 @@ class UniversidadController {
         
         const univ = await Univ.create({
             name: request.input('nombre'),
-            img_route: 'univ_profiles'+name_img
+            img_route: 'univ_profiles/'+name_img
         })
         try {
             await univ.save()
@@ -52,7 +52,7 @@ class UniversidadController {
     async getList({view}){
         const univ = await Univ.all()
 
-        return view.render('uni.elist',{univ : univ.toJSON()})
+        return view.render('admin.uni.elist',{univ : univ.toJSON()})
     }
         
     async update(request, response) {
